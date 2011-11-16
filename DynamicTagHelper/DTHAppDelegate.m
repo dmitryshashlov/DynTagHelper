@@ -42,8 +42,88 @@
   return (value&rangeFilledMask)>>range.location;
 }
 
+- (void)setControlsEnabled:(BOOL)enabled
+{
+  if (enabled) {
+    _dynamicHeightCheckbox.state = NSOffState;
+    [_dynamicHeightCheckbox setEnabled:YES];
+    
+    _dynamicWidthCheckbox.state = NSOffState;
+    [_dynamicWidthCheckbox setEnabled:YES];
+    
+    _dynamicOffsetYGroup1.state = NSOffState;
+    [_dynamicOffsetYGroup1 setEnabled:YES];
+    
+    _dynamicOffsetYGroup2.state = NSOffState;
+    [_dynamicOffsetYGroup2 setEnabled:YES];
+    
+    _dynamicOffsetYGroup3.state = NSOffState;
+    [_dynamicOffsetYGroup3 setEnabled:YES];
+    
+    _dynamicOffsetYGroup4.state = NSOffState;
+    [_dynamicOffsetYGroup4 setEnabled:YES];
+    
+    _dynamicOffsetXGroup1.state = NSOffState;
+    [_dynamicOffsetXGroup1 setEnabled:YES];
+    
+    _dynamicOffsetXGroup2.state = NSOffState;
+    [_dynamicOffsetXGroup2 setEnabled:YES];
+    
+    _dynamicOffsetXGroup3.state = NSOffState;
+    [_dynamicOffsetXGroup3 setEnabled:YES];
+    
+    _dynamicOffsetXGroup4.state = NSOffState;
+    [_dynamicOffsetXGroup4 setEnabled:YES];
+    
+    [_maxHeightTextField setEnabled:YES];
+    [_maxWidthTextField setEnabled:YES];
+  } else {
+    _dynamicHeightCheckbox.state = NSOffState;
+    [_dynamicHeightCheckbox setEnabled:NO];
+    
+    _dynamicWidthCheckbox.state = NSOffState;
+    [_dynamicWidthCheckbox setEnabled:NO];
+    
+    _dynamicOffsetYGroup1.state = NSOffState;
+    [_dynamicOffsetYGroup1 setEnabled:NO];
+    
+    _dynamicOffsetYGroup2.state = NSOffState;
+    [_dynamicOffsetYGroup2 setEnabled:NO];
+    
+    _dynamicOffsetYGroup3.state = NSOffState;
+    [_dynamicOffsetYGroup3 setEnabled:NO];
+    
+    _dynamicOffsetYGroup4.state = NSOffState;
+    [_dynamicOffsetYGroup4 setEnabled:NO];
+    
+    _dynamicOffsetXGroup1.state = NSOffState;
+    [_dynamicOffsetXGroup1 setEnabled:NO];
+    
+    _dynamicOffsetXGroup2.state = NSOffState;
+    [_dynamicOffsetXGroup2 setEnabled:NO];
+    
+    _dynamicOffsetXGroup3.state = NSOffState;
+    [_dynamicOffsetXGroup3 setEnabled:NO];
+    
+    _dynamicOffsetXGroup4.state = NSOffState;
+    [_dynamicOffsetXGroup4 setEnabled:NO];
+    
+    _maxHeightTextField.stringValue = @"";
+    [_maxHeightTextField setEnabled:NO];
+    
+    _maxWidthTextField.stringValue = @"";
+    [_maxWidthTextField setEnabled:NO];  
+  }
+}
+
 - (void)controlValueChanged:(id)sender
 {
+  // enabled bit
+  if (sender == _dynamicTagEnabledCheckbox) {
+    [self setControlsEnabled:_dynamicTagEnabledCheckbox.state];
+    _tagValue = _dynamicTagEnabledCheckbox.state ? _tagValue ^ 1<<30 : 0;
+  }
+  
   // bits from right to left
   if (sender == _dynamicHeightCheckbox) {
     _tagValue = _tagValue ^ 1<<0;
@@ -98,33 +178,40 @@
 - (void)tagFieldValueCHanged:(id)sender
 {
   unsigned int value = ((NSTextField *)sender).intValue;
-  _tagValue = value;
   
-  _dynamicHeightCheckbox.state = IS_BYTE_CHECKED(value, 0);
-  _dynamicWidthCheckbox.state = IS_BYTE_CHECKED(value, 1);
+  BOOL isDynamic = IS_BYTE_CHECKED(value, 30);
+  [self setControlsEnabled:isDynamic];
+  _dynamicTagEnabledCheckbox.state = isDynamic;
+
+  _tagValue = isDynamic ? value : 0;
   
-  _dynamicOffsetYGroup4.state = IS_BYTE_CHECKED(value, 2);
-  _dynamicOffsetYGroup3.state = IS_BYTE_CHECKED(value, 3);
-  _dynamicOffsetYGroup2.state = IS_BYTE_CHECKED(value, 4);
-  _dynamicOffsetYGroup1.state = IS_BYTE_CHECKED(value, 5);
-  
-  _dynamicOffsetXGroup4.state = IS_BYTE_CHECKED(value, 6);
-  _dynamicOffsetXGroup3.state = IS_BYTE_CHECKED(value, 7);
-  _dynamicOffsetXGroup2.state = IS_BYTE_CHECKED(value, 8);
-  _dynamicOffsetXGroup1.state = IS_BYTE_CHECKED(value, 9);  
-  
-  int maxHeight = [self getValueRange:value range:NSRangeFromString(@"10 10")];
-  if (maxHeight) {
-    _maxHeightTextField.intValue = maxHeight;
-  } else {
-    _maxHeightTextField.stringValue = @"";
-  }
-  
-  int maxWidth = [self getValueRange:value range:NSRangeFromString(@"20 10")];
-  if (maxWidth) {
-    _maxWidthTextField.intValue = maxWidth;
-  } else {
-    _maxWidthTextField.stringValue = @"";
+  if (isDynamic) {
+    _dynamicHeightCheckbox.state = IS_BYTE_CHECKED(value, 0);
+    _dynamicWidthCheckbox.state = IS_BYTE_CHECKED(value, 1);
+    
+    _dynamicOffsetYGroup4.state = IS_BYTE_CHECKED(value, 2);
+    _dynamicOffsetYGroup3.state = IS_BYTE_CHECKED(value, 3);
+    _dynamicOffsetYGroup2.state = IS_BYTE_CHECKED(value, 4);
+    _dynamicOffsetYGroup1.state = IS_BYTE_CHECKED(value, 5);
+    
+    _dynamicOffsetXGroup4.state = IS_BYTE_CHECKED(value, 6);
+    _dynamicOffsetXGroup3.state = IS_BYTE_CHECKED(value, 7);
+    _dynamicOffsetXGroup2.state = IS_BYTE_CHECKED(value, 8);
+    _dynamicOffsetXGroup1.state = IS_BYTE_CHECKED(value, 9);  
+    
+    int maxHeight = [self getValueRange:value range:NSRangeFromString(@"10 10")];
+    if (maxHeight) {
+      _maxHeightTextField.intValue = maxHeight;
+    } else {
+      _maxHeightTextField.stringValue = @"";
+    }
+    
+    int maxWidth = [self getValueRange:value range:NSRangeFromString(@"20 10")];
+    if (maxWidth) {
+      _maxWidthTextField.intValue = maxWidth;
+    } else {
+      _maxWidthTextField.stringValue = @"";
+    }
   }
 }
 

@@ -11,6 +11,8 @@
 @interface DTHAppDelegate : NSObject <NSApplicationDelegate> {
   NSInteger           _tagValue;
   
+  IBOutlet NSButton*  _dynamicTagEnabledCheckbox;
+  
   IBOutlet NSButton*  _dynamicWidthCheckbox;
   IBOutlet NSButton*  _dynamicHeightCheckbox;
   
