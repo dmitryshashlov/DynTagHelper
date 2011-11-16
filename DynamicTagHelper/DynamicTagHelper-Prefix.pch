@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DynamicTagHelper' target in the 'DynamicTagHelper' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif

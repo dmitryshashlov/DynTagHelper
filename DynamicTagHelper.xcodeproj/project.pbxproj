@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B64E204B1472C21700427EF8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64E204A1472C21700427EF8 /* Cocoa.framework */; };
+		B64E20551472C21700427EF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B64E20531472C21700427EF8 /* InfoPlist.strings */; };
+		B64E20571472C21700427EF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B64E20561472C21700427EF8 /* main.m */; };
+		B64E205B1472C21700427EF8 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B64E20591472C21700427EF8 /* Credits.rtf */; };
+		B64E205E1472C21700427EF8 /* DTHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B64E205D1472C21700427EF8 /* DTHAppDelegate.m */; };
+		B64E20611472C21700427EF8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64E205F1472C21700427EF8 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B64E20461472C21700427EF8 /* DynamicTagHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicTagHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64E204A1472C21700427EF8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B64E204D1472C21700427EF8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B64E204E1472C21700427EF8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B64E204F1472C21700427EF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B64E20521472C21700427EF8 /* DynamicTagHelper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DynamicTagHelper-Info.plist"; sourceTree = "<group>"; };
+		B64E20541472C21700427EF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B64E20561472C21700427EF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B64E20581472C21700427EF8 /* DynamicTagHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DynamicTagHelper-Prefix.pch"; sourceTree = "<group>"; };
+		B64E205A1472C21700427EF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B64E205C1472C21700427EF8 /* DTHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTHAppDelegate.h; sourceTree = "<group>"; };
+		B64E205D1472C21700427EF8 /* DTHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTHAppDelegate.m; sourceTree = "<group>"; };
+		B64E20601472C21700427EF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B64E20431472C21700427EF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64E204B1472C21700427EF8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B64E203B1472C21700427EF8 = {
+			isa = PBXGroup;
+			children = (
+				B64E20501472C21700427EF8 /* DynamicTagHelper */,
+				B64E20491472C21700427EF8 /* Frameworks */,
+				B64E20471472C21700427EF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B64E20471472C21700427EF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B64E20461472C21700427EF8 /* DynamicTagHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B64E20491472C21700427EF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B64E204A1472C21700427EF8 /* Cocoa.framework */,
+				B64E204C1472C21700427EF8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B64E204C1472C21700427EF8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B64E204D1472C21700427EF8 /* AppKit.framework */,
+				B64E204E1472C21700427EF8 /* CoreData.framework */,
+				B64E204F1472C21700427EF8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B64E20501472C21700427EF8 /* DynamicTagHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B64E205C1472C21700427EF8 /* DTHAppDelegate.h */,
+				B64E205D1472C21700427EF8 /* DTHAppDelegate.m */,
+				B64E205F1472C21700427EF8 /* MainMenu.xib */,
+				B64E20511472C21700427EF8 /* Supporting Files */,
+			);
+			path = DynamicTagHelper;
+			sourceTree = "<group>";
+		};
+		B64E20511472C21700427EF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B64E20521472C21700427EF8 /* DynamicTagHelper-Info.plist */,
+				B64E20531472C21700427EF8 /* InfoPlist.strings */,
+				B64E20561472C21700427EF8 /* main.m */,
+				B64E20581472C21700427EF8 /* DynamicTagHelper-Prefix.pch */,
+				B64E20591472C21700427EF8 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B64E20451472C21700427EF8 /* DynamicTagHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B64E20641472C21700427EF8 /* Build configuration list for PBXNativeTarget "DynamicTagHelper" */;
+			buildPhases = (
+				B64E20421472C21700427EF8 /* Sources */,
+				B64E20431472C21700427EF8 /* Frameworks */,
+				B64E20441472C21700427EF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicTagHelper;
+			productName = DynamicTagHelper;
+			productReference = B64E20461472C21700427EF8 /* DynamicTagHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B64E203D1472C21700427EF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Notamedia;
+			};
+			buildConfigurationList = B64E20401472C21700427EF8 /* Build configuration list for PBXProject "DynamicTagHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B64E203B1472C21700427EF8;
+			productRefGroup = B64E20471472C21700427EF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B64E20451472C21700427EF8 /* DynamicTagHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B64E20441472C21700427EF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64E20551472C21700427EF8 /* InfoPlist.strings in Resources */,
+				B64E205B1472C21700427EF8 /* Credits.rtf in Resources */,
+				B64E20611472C21700427EF8 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B64E20421472C21700427EF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64E20571472C21700427EF8 /* main.m in Sources */,
+				B64E205E1472C21700427EF8 /* DTHAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B64E20531472C21700427EF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64E20541472C21700427EF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B64E20591472C21700427EF8 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64E205A1472C21700427EF8 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B64E205F1472C21700427EF8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64E20601472C21700427EF8 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B64E20621472C21700427EF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B64E20631472C21700427EF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B64E20651472C21700427EF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicTagHelper/DynamicTagHelper-Prefix.pch";
+				INFOPLIST_FILE = "DynamicTagHelper/DynamicTagHelper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B64E20661472C21700427EF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicTagHelper/DynamicTagHelper-Prefix.pch";
+				INFOPLIST_FILE = "DynamicTagHelper/DynamicTagHelper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B64E20401472C21700427EF8 /* Build configuration list for PBXProject "DynamicTagHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64E20621472C21700427EF8 /* Debug */,
+				B64E20631472C21700427EF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B64E20641472C21700427EF8 /* Build configuration list for PBXNativeTarget "DynamicTagHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64E20651472C21700427EF8 /* Debug */,
+				B64E20661472C21700427EF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B64E203D1472C21700427EF8 /* Project object */;
+}
