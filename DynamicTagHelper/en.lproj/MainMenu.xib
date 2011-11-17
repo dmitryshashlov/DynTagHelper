@@ -473,7 +473,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{335, 390}, {426, 166}}</string>
 				<int key="NSWTFlags">1954021376</int>
-				<string key="NSWindowTitle">DynamicTagHelper</string>
+				<string key="NSWindowTitle">DynamicTagHelper v1.0</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
